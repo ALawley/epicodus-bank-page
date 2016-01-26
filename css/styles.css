@@ -1,3 +1,14 @@
 #account-info {
   display: none;
 }
+
+.account-balance {
+  text-align: center;
+  font-size: 2em;
+  border: 2px solid black;
+}
+
+label {
+  font-style: italic;
+  font-size: 1.3em;
+}
