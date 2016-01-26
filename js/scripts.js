@@ -19,8 +19,12 @@ $(document).ready(function() {
 
     var newAccount = new BankAccount(accountName, initialDeposit);
 
+    $("#account-info").show();
     $(".account-name").text(newAccount.accountName);
     $(".account-balance").text(newAccount.balance);
+
+    $("input#accountname").val("");
+    $("input#initialdeposit").val("");
 
     $("form#withdraw").submit(function(event) {
       event.preventDefault();
