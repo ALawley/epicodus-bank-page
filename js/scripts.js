@@ -11,10 +11,16 @@ BankAccount.prototype.deposit = function(deposited) {
   this.balance = this.balance + deposited;
 }
 
+function toProperCase(str) {
+  return str.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}
+
 $(document).ready(function() {
   $("form#account-signup").submit(function(event) {
     event.preventDefault();
-    var accountName = $("input#accountname").val();
+    var accountName = toProperCase($("input#accountname").val());
     var initialDeposit = parseInt($("input#initialdeposit").val());
 
     var newAccount = new BankAccount(accountName, initialDeposit);
