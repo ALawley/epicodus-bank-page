@@ -12,3 +12,12 @@ label {
   font-style: italic;
   font-size: 1.3em;
 }
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 80px;
+}
